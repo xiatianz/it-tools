@@ -17,9 +17,7 @@ import CollapsibleToolMenu from '@/components/CollapsibleToolMenu.vue';
 
 const themeVars = useThemeVars();
 const styleStore = useStyleStore();
-const version = config.app.version;
-const commitSha = config.app.lastCommitSha.slice(0, 7);
-
+// 删除version和commitSha的定义
 const { tracker } = useTracker();
 const { t } = useI18n();
 
@@ -62,18 +60,6 @@ const tools = computed<ToolCategory[]>(() => [
         <div class="footer">
           <div>
             955991工具箱
-
-            <template v-if="commitSha && commitSha.length > 0">
-              -
-              <c-link
-                target="_blank"
-                rel="noopener"
-                type="primary"
-                :href="`https://github.com/xiatianz/it-tools/tree/${commitSha}`"
-              >
-                {{ commitSha }}
-              </c-link>
-            </template>
           </div>
           <div>
             © {{ new Date().getFullYear() }} 955991工具箱
