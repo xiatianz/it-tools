@@ -1,2 +1,21 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# 允许所有搜索引擎爬取所有内容
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Baiduspider
+Allow: /
+User-agent: Sogou web spider
+Allow: /
+User-agent: Sogou inst spider
+Allow: /
+User-agent: 360Spider
+Allow: /
+User-agent: YisouSpider
+Allow: /
+
+# 网站地图
+Sitemap: https://955991.xyz/sitemap.xml
