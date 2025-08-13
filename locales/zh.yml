@@ -1,12 +1,6 @@
-home:
-  categories:
-    newestTools: '最新工具'
-    favoriteTools: '我的收藏'
-    allTools: '全部工具'
-    favoritesDndToolTip: '拖放重新排列收藏夹'
+header:
   subtitle: '实用在线工具集合'
   toggleMenu: '切换菜单'
-  home: '主页'
   uiLib: 'UI 库'
   support: '支持 IT 工具开发'
   buyMeACoffee: '赞助'
@@ -27,6 +21,12 @@ home:
     darkMode: '深色模式'
     lightMode: '浅色模式'
     mode: '颜色模式'
+home:
+  categories:
+    allTools: '全部工具'
+    newestTools: '最新工具'
+    favoriteTools: '我的收藏'
+    favoritesDndToolTip: '拖放重新排列收藏夹'
 about:
   content: >
     # 关于 955991工具箱
@@ -57,6 +57,7 @@ toolCard:
   new: '新'
 search:
   label: '搜索'
+  placeholder: '搜索工具或命令...'
 tools:
   categories:
     favorite-tools: '我的收藏'
@@ -162,6 +163,21 @@ tools:
   git-memo:
     title: Git 备忘录
     description: Git是一种去中心化的版本管理软件。使用此备忘单，您可以快速访问最常见的git命令.
+    setGlobalConfig: 设置全局配置
+    getStarted: 开始使用
+    createRepository: 创建Git仓库
+    cloneRepository: 克隆现有Git仓库
+    commit: 提交
+    commitAll: 提交所有已跟踪的更改
+    amendCommit: 添加新修改到上次提交
+    mistake: 我犯了一个错误
+    changeCommitMessage: 修改上次提交消息
+    undoCommitKeepChanges: 撤销最近一次提交并保留更改
+    undoNCommitsKeepChanges: 撤销最近N次提交并保留更改
+    undoCommitDiscardChanges: 撤销最近一次提交并丢弃更改
+    resetToRemote: 重置分支到远程状态
+    miscellaneous: 其他
+    renameMasterToMain: 将本地master分支重命名为main
 
   slugify-string:
     title: 打乱字符串
@@ -277,6 +293,17 @@ tools:
   wifi-qrcode-generator:
     title: WiFi 二维码生成器
     description: 生成和下载QR码以快速连接到WiFi网络。
+    encryptionMethod: 加密方法
+    ssid: SSID
+    password: 密码
+    hiddenSSID: 隐藏SSID
+    eapMethod: EAP方法
+    identity: 身份
+    anonymous: 匿名?
+    eapPhase2Method: EAP阶段2方法
+    foregroundColor: 前景色
+    backgroundColor: 背景色
+    downloadQRCode: 下载二维码
 
   xml-formatter:
     title: XML 格式化
@@ -447,3 +474,53 @@ tools:
   text-to-binary:
     title: 文本到 ASCII 二进制
     description: 将文本转换为其 ASCII 二进制表示形式，反之亦然。
+
+  email-normalizer:
+    title: 电子邮件标准化器
+    description: 标准化电子邮件地址格式，确保一致的表示形式。
+
+  ascii-text-drawer:
+    title: ASCII文本绘制器
+    description: 将文本转换为ASCII艺术字符画。
+
+  safelink-decoder:
+    title: 安全链接解码器
+    description: 解码各种服务提供的安全链接。
+
+  markdown-to-html:
+    title: Markdown转HTML
+    description: 将Markdown格式文本转换为HTML格式。
+
+  regex-tester:
+    title: 正则表达式测试器
+    description: 测试正则表达式匹配并查看结果。
+    testYourRegex: 测试您的正则表达式
+    sampleText: 示例文本
+    matchResults: 匹配结果
+    flags: 标志
+    global: 全局
+    caseInsensitive: 不区分大小写
+    multiline: 多行
+    dotAll: 点匹配所有字符
+    unicode: Unicode
+    sticky: 粘性匹配
+
+  regex-memo:
+    title: 正则表达式备忘录
+    description: 常用正则表达式模式的参考指南。
+
+  cypher:
+    title: 加密/解密文本
+    description: 使用各种算法加密和解密文本。
+
+  json-viewer:
+    title: JSON查看器
+    description: 格式化和查看JSON数据，使其更易于阅读。
+
+  meta-tag-generator:
+    title: 元标签生成器
+    description: 生成HTML元标签以优化网页在搜索引擎和社交平台上的展示。
+
+  otp-code-generator-and-validator:
+    title: OTP代码生成器和验证器
+    description: 生成和验证基于时间或计数器的一次性密码。

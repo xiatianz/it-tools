@@ -63,10 +63,6 @@ const tools = computed<ToolCategory[]>(() => [
           <div>
             955991工具箱
 
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/xiatianz/it-tools/tree/v${version}`">
-              v{{ version }}
-            </c-link>
-
             <template v-if="commitSha && commitSha.length > 0">
               -
               <c-link
