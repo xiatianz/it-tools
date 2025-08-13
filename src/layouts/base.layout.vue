@@ -61,9 +61,9 @@ const tools = computed<ToolCategory[]>(() => [
 
         <div class="footer">
           <div>
-            IT-Tools
+            955991工具箱
 
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
+            <c-link target="_blank" rel="noopener" :href="`https://github.com/xiatianz/it-tools/tree/v${version}`">
               v{{ version }}
             </c-link>
 
@@ -73,20 +73,17 @@ const tools = computed<ToolCategory[]>(() => [
                 target="_blank"
                 rel="noopener"
                 type="primary"
-                :href="`https://github.com/CorentinTh/it-tools/tree/${commitSha}`"
+                :href="`https://github.com/xiatianz/it-tools/tree/${commitSha}`"
               >
                 {{ commitSha }}
               </c-link>
             </template>
-      </div>
-
-        <command-palette />
-
-        <locale-selector v-if="!styleStore.isSmallScreen" />
-
-        <div>
-          <NavbarButtons v-if="!styleStore.isSmallScreen" />
+          </div>
+          <div>
+            © {{ new Date().getFullYear() }} 955991工具箱
+          </div>
         </div>
+      </div>
     </template>
 
     <template #content>
