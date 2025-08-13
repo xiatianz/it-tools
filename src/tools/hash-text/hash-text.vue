@@ -37,21 +37,21 @@ const hashText = (algo: AlgoNames, value: string) => formatWithEncoding(algos[al
 <template>
   <div>
     <c-card>
-      <c-input-text v-model:value="clearText" multiline raw-text placeholder="Your string to hash..." rows="3" autosize autofocus label="Your text to hash:" />
+      <c-input-text v-model:value="clearText" multiline raw-text placeholder="输入要哈希的文本..." rows="3" autosize autofocus label="要哈希的文本：" />
 
       <n-divider />
 
       <c-select
         v-model:value="encoding"
         mb-4
-        label="Digest encoding"
+        label="摘要编码"
         :options="[
           {
-            label: 'Binary (base 2)',
+            label: '二进制 (base 2)',
             value: 'Bin',
           },
           {
-            label: 'Hexadecimal (base 16)',
+            label: '十六进制 (base 16)',
             value: 'Hex',
           },
           {
@@ -59,7 +59,7 @@ const hashText = (algo: AlgoNames, value: string) => formatWithEncoding(algos[al
             value: 'Base64',
           },
           {
-            label: 'Base64url (base 64 with url safe chars)',
+            label: 'Base64url (URL安全字符)',
             value: 'Base64url',
           },
         ]"

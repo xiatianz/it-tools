@@ -42,7 +42,7 @@ const [uuids, refreshUUIDs] = computedRefreshable(() => withDefaultOnError(() =>
     return generator(index);
   }).join('\n'), ''));
 
-const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' });
+const { copy } = useCopy({ source: uuids, text: 'UUID已复制到剪贴板' });
 </script>
 
 <template>
@@ -50,8 +50,8 @@ const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' 
     <c-buttons-select v-model:value="version" :options="versions" label="UUID version" label-width="100px" mb-2 />
 
     <div mb-2 flex items-center>
-      <span w-100px>Quantity </span>
-      <n-input-number v-model:value="count" flex-1 :min="1" :max="50" placeholder="UUID quantity" />
+      <span w-100px>数量 </span>
+      <n-input-number v-model:value="count" flex-1 :min="1" :max="50" placeholder="UUID数量" />
     </div>
 
     <div v-if="version === 'v3' || version === 'v5'">
@@ -64,7 +64,7 @@ const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' 
             OID: '6ba7b812-9dad-11d1-80b4-00c04fd430c8',
             X500: '6ba7b814-9dad-11d1-80b4-00c04fd430c8',
           }"
-          label="Namespace"
+          label="命名空间"
           label-width="100px"
           mb-2
         />
@@ -72,7 +72,7 @@ const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' 
       <div flex-1>
         <c-input-text
           v-model:value="v35Args.namespace"
-          placeholder="Namespace"
+          placeholder="命名空间"
           label-width="100px"
           label-position="left"
           label=" "
@@ -84,7 +84,7 @@ const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' 
       <c-input-text
         v-model:value="v35Args.name"
         placeholder="Name"
-        label="Name"
+        label="名称"
         label-width="100px"
         label-position="left"
         mb-2
@@ -95,7 +95,7 @@ const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' 
       style="text-align: center; font-family: monospace"
       :value="uuids"
       multiline
-      placeholder="Your uuids"
+      placeholder="您的UUID"
       autosize
       rows="1"
       readonly
@@ -107,10 +107,10 @@ const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' 
 
     <div flex justify-center gap-3>
       <c-button autofocus @click="copy()">
-        Copy
+        复制
       </c-button>
       <c-button @click="refreshUUIDs">
-        Refresh
+        刷新
       </c-button>
     </div>
   </div>

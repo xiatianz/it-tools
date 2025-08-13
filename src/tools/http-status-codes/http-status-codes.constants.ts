@@ -8,7 +8,7 @@ export const codesByCategories: {
   }[]
 }[] = [
   {
-    category: '1xx informational response',
+    category: '1xx 信息响应',
     codes: [
       {
         code: 100,
@@ -37,7 +37,7 @@ export const codesByCategories: {
     ],
   },
   {
-    category: '2xx success',
+    category: '2xx 成功',
     codes: [
       {
         code: 200,
@@ -106,7 +106,7 @@ export const codesByCategories: {
     ],
   },
   {
-    category: '3xx redirection',
+    category: '3xx 重定向',
     codes: [
       {
         code: 300,
@@ -168,7 +168,7 @@ export const codesByCategories: {
     ],
   },
   {
-    category: '4xx client error',
+    category: '4xx 客户端错误',
     codes: [
       {
         code: 400,
@@ -355,7 +355,7 @@ export const codesByCategories: {
     ],
   },
   {
-    category: '5xx server error',
+    category: '5xx 服务器错误',
     codes: [
       {
         code: 500,

@@ -6,36 +6,36 @@ import { isNotThrowing } from '@/utils/boolean';
 
 const inputText = ref('');
 const binaryFromText = computed(() => convertTextToAsciiBinary(inputText.value));
-const { copy: copyBinary } = useCopy({ source: binaryFromText });
+const { copy: copyBinary } = useCopy({ source: binaryFromText, text: '二进制已复制到剪贴板' });
 
 const inputBinary = ref('');
 const textFromBinary = computed(() => withDefaultOnError(() => convertAsciiBinaryToText(inputBinary.value), ''));
 const inputBinaryValidationRules = [
   {
     validator: (value: string) => isNotThrowing(() => convertAsciiBinaryToText(value)),
-    message: 'Binary should be a valid ASCII binary string with multiples of 8 bits',
+    message: '二进制应为有效的ASCII二进制字符串，且位数为8的倍数',
   },
 ];
-const { copy: copyText } = useCopy({ source: textFromBinary });
+const { copy: copyText } = useCopy({ source: textFromBinary, text: '文本已复制到剪贴板' });
 </script>
 
 <template>
-  <c-card title="Text to ASCII binary">
-    <c-input-text v-model:value="inputText" multiline placeholder="e.g. 'Hello world'" label="Enter text to convert to binary" autosize autofocus raw-text test-id="text-to-binary-input" />
-    <c-input-text v-model:value="binaryFromText" label="Binary from your text" multiline raw-text readonly mt-2 placeholder="The binary representation of your text will be here" test-id="text-to-binary-output" />
+  <c-card title="文本转ASCII二进制">
+    <c-input-text v-model:value="inputText" multiline placeholder="例如: '你好，世界'" label="输入要转换为二进制的文本" autosize autofocus raw-text test-id="text-to-binary-input" />
+    <c-input-text v-model:value="binaryFromText" label="文本的二进制表示" multiline raw-text readonly mt-2 placeholder="您的文本的二进制表示将显示在这里" test-id="text-to-binary-output" />
     <div mt-2 flex justify-center>
       <c-button :disabled="!binaryFromText" @click="copyBinary()">
-        Copy binary to clipboard
+        复制二进制到剪贴板
       </c-button>
     </div>
   </c-card>
 
-  <c-card title="ASCII binary to text">
-    <c-input-text v-model:value="inputBinary" multiline placeholder="e.g. '01001000 01100101 01101100 01101100 01101111'" label="Enter binary to convert to text" autosize raw-text :validation-rules="inputBinaryValidationRules" test-id="binary-to-text-input" />
-    <c-input-text v-model:value="textFromBinary" label="Text from your binary" multiline raw-text readonly mt-2 placeholder="The text representation of your binary will be here" test-id="binary-to-text-output" />
+  <c-card title="ASCII二进制转文本">
+    <c-input-text v-model:value="inputBinary" multiline placeholder="例如: '01001000 01100101 01101100 01101100 01101111'" label="输入要转换为文本的二进制" autosize raw-text :validation-rules="inputBinaryValidationRules" test-id="binary-to-text-input" />
+    <c-input-text v-model:value="textFromBinary" label="二进制的文本表示" multiline raw-text readonly mt-2 placeholder="您的二进制的文本表示将显示在这里" test-id="binary-to-text-output" />
     <div mt-2 flex justify-center>
       <c-button :disabled="!textFromBinary" @click="copyText()">
-        Copy text to clipboard
+        复制文本到剪贴板
       </c-button>
     </div>
   </c-card>

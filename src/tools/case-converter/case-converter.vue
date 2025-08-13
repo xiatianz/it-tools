@@ -22,59 +22,59 @@ const input = ref('lorem ipsum dolor sit amet');
 
 const formats = computed(() => [
   {
-    label: 'Lowercase:',
+    label: '小写:',
     value: input.value.toLocaleLowerCase(),
   },
   {
-    label: 'Uppercase:',
+    label: '大写:',
     value: input.value.toLocaleUpperCase(),
   },
   {
-    label: 'Camelcase:',
+    label: '驼峰式:',
     value: camelCase(input.value, baseConfig),
   },
   {
-    label: 'Capitalcase:',
+    label: '首字母大写:',
     value: capitalCase(input.value, baseConfig),
   },
   {
-    label: 'Constantcase:',
+    label: '常量式:',
     value: constantCase(input.value, baseConfig),
   },
   {
-    label: 'Dotcase:',
+    label: '点式:',
     value: dotCase(input.value, baseConfig),
   },
   {
-    label: 'Headercase:',
+    label: '标题式:',
     value: headerCase(input.value, baseConfig),
   },
   {
-    label: 'Nocase:',
+    label: '无格式:',
     value: noCase(input.value, baseConfig),
   },
   {
-    label: 'Paramcase:',
+    label: '参数式:',
     value: paramCase(input.value, baseConfig),
   },
   {
-    label: 'Pascalcase:',
+    label: '帕斯卡式:',
     value: pascalCase(input.value, baseConfig),
   },
   {
-    label: 'Pathcase:',
+    label: '路径式:',
     value: pathCase(input.value, baseConfig),
   },
   {
-    label: 'Sentencecase:',
+    label: '句子式:',
     value: sentenceCase(input.value, baseConfig),
   },
   {
-    label: 'Snakecase:',
+    label: '下划线式:',
     value: snakeCase(input.value, baseConfig),
   },
   {
-    label: 'Mockingcase:',
+    label: '交替大小写:',
     value: input.value
       .split('')
       .map((char, index) => (index % 2 === 0 ? char.toUpperCase() : char.toLowerCase()))
@@ -93,8 +93,8 @@ const inputLabelAlignmentConfig = {
   <c-card>
     <c-input-text
       v-model:value="input"
-      label="Your string:"
-      placeholder="Your string..."
+      label="您的字符串:"
+      placeholder="输入您的字符串..."
       raw-text
       v-bind="inputLabelAlignmentConfig"
     />

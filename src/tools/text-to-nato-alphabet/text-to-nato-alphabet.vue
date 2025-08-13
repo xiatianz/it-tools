@@ -4,22 +4,22 @@ import { useCopy } from '@/composable/copy';
 
 const input = ref('');
 const natoText = computed(() => textToNatoAlphabet({ text: input.value }));
-const { copy } = useCopy({ source: natoText, text: 'NATO alphabet string copied.' });
+const { copy } = useCopy({ source: natoText, text: 'NATO字母已复制。' });
 </script>
 
 <template>
   <div>
     <c-input-text
       v-model:value="input"
-      label="Your text to convert to NATO phonetic alphabet"
-      placeholder="Put your text here..."
+      label="要转换为NATO音标字母的文本"
+      placeholder="在此输入您的文本..."
       clearable
       mb-5
     />
 
     <div v-if="natoText">
       <div mb-2>
-        Your text in NATO phonetic alphabet
+        您的文本的NATO音标字母表示
       </div>
       <c-card>
         {{ natoText }}
@@ -27,7 +27,7 @@ const { copy } = useCopy({ source: natoText, text: 'NATO alphabet string copied.
 
       <div mt-3 flex justify-center>
         <c-button autofocus @click="copy()">
-          Copy NATO string
+          复制NATO字母
         </c-button>
       </div>
     </div>

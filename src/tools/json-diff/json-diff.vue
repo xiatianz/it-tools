@@ -14,7 +14,7 @@ const rightJson = computed(() => withDefaultOnError(() => JSON5.parse(rawRightJs
 const jsonValidationRules = [
   {
     validator: (value: string) => value === '' || isNotThrowing(() => JSON5.parse(value)),
-    message: 'Invalid JSON format',
+    message: 'JSON格式无效',
   },
 ];
 </script>
@@ -23,8 +23,8 @@ const jsonValidationRules = [
   <c-input-text
     v-model:value="rawLeftJson"
     :validation-rules="jsonValidationRules"
-    label="Your first JSON"
-    placeholder="Paste your first JSON here..."
+    label="您的第一个JSON"
+    placeholder="在此粘贴您的第一个JSON..."
     rows="20"
     multiline
     test-id="leftJson"
@@ -35,8 +35,8 @@ const jsonValidationRules = [
   <c-input-text
     v-model:value="rawRightJson"
     :validation-rules="jsonValidationRules"
-    label="Your JSON to compare"
-    placeholder="Paste your JSON to compare here..."
+    label="您要比较的JSON"
+    placeholder="在此粘贴您要比较的JSON..."
     rows="20"
     multiline
     test-id="rightJson"

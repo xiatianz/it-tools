@@ -9,17 +9,17 @@ const transformer = (value: string) => withDefaultOnError(() => JSON.stringify(J
 const rules: UseValidationRule<string>[] = [
   {
     validator: (v: string) => v === '' || JSON5.parse(v),
-    message: 'Provided JSON is not valid.',
+    message: '提供的JSON格式无效。',
   },
 ];
 </script>
 
 <template>
   <format-transformer
-    input-label="Your raw JSON"
+    input-label="您的原始JSON"
     :input-default="defaultValue"
-    input-placeholder="Paste your raw JSON here..."
-    output-label="Minified version of your JSON"
+    input-placeholder="在此粘贴您的原始JSON..."
+    output-label="压缩后的JSON"
     output-language="json"
     :input-validation-rules="rules"
     :transformer="transformer"

@@ -23,21 +23,21 @@ function printHtml() {
     <c-input-text
       v-model:value="inputMarkdown"
       multiline raw-text
-      placeholder="Your Markdown content..."
+      placeholder="您的Markdown内容..."
       rows="8"
       autofocus
-      label="Your Markdown to convert:"
+      label="要转换的Markdown:"
     />
 
     <n-divider />
 
-    <n-form-item label="Output HTML:">
+    <n-form-item label="输出HTML:">
       <TextareaCopyable :value="outputHtml" :word-wrap="true" language="html" />
     </n-form-item>
 
     <div flex justify-center>
       <n-button @click="printHtml">
-        Print as PDF
+        打印为PDF
       </n-button>
     </div>
   </div>

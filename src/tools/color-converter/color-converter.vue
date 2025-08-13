@@ -12,44 +12,44 @@ extend([cmykPlugin, hwbPlugin, namesPlugin, lchPlugin]);
 
 const formats = {
   picker: buildColorFormat({
-    label: 'color picker',
+    label: '颜色选择器',
     format: (v: Colord) => v.toHex(),
     type: 'color-picker',
   }),
   hex: buildColorFormat({
-    label: 'hex',
+    label: '十六进制',
     format: (v: Colord) => v.toHex(),
-    placeholder: 'e.g. #ff0000',
+    placeholder: '例如: #ff0000',
   }),
   rgb: buildColorFormat({
-    label: 'rgb',
+    label: 'RGB',
     format: (v: Colord) => v.toRgbString(),
-    placeholder: 'e.g. rgb(255, 0, 0)',
+    placeholder: '例如: rgb(255, 0, 0)',
   }),
   hsl: buildColorFormat({
-    label: 'hsl',
+    label: 'HSL',
     format: (v: Colord) => v.toHslString(),
-    placeholder: 'e.g. hsl(0, 100%, 50%)',
+    placeholder: '例如: hsl(0, 100%, 50%)',
   }),
   hwb: buildColorFormat({
-    label: 'hwb',
+    label: 'HWB',
     format: (v: Colord) => v.toHwbString(),
-    placeholder: 'e.g. hwb(0, 0%, 0%)',
+    placeholder: '例如: hwb(0, 0%, 0%)',
   }),
   lch: buildColorFormat({
-    label: 'lch',
+    label: 'LCH',
     format: (v: Colord) => v.toLchString(),
-    placeholder: 'e.g. lch(53.24, 104.55, 40.85)',
+    placeholder: '例如: lch(53.24, 104.55, 40.85)',
   }),
   cmyk: buildColorFormat({
-    label: 'cmyk',
+    label: 'CMYK',
     format: (v: Colord) => v.toCmykString(),
-    placeholder: 'e.g. cmyk(0, 100%, 100%, 0)',
+    placeholder: '例如: cmyk(0, 100%, 100%, 0)',
   }),
   name: buildColorFormat({
-    label: 'name',
-    format: (v: Colord) => v.toName({ closest: true }) ?? 'Unknown',
-    placeholder: 'e.g. red',
+    label: '颜色名称',
+    format: (v: Colord) => v.toName({ closest: true }) ?? '未知',
+    placeholder: '例如: red',
   }),
 };
 

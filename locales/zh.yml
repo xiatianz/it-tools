@@ -130,10 +130,30 @@ tools:
   http-status-codes:
     title: HTTP 状态码
     description: 所有HTTP状态的列表对其名称和含义解释。
+    search: 搜索HTTP状态码...
+    category:
+      informational: '1xx 信息响应'
+      success: '2xx 成功'
+      redirection: '3xx 重定向'
+      client_error: '4xx 客户端错误'
+      server_error: '5xx 服务器错误'
+      search_results: '搜索结果'
 
   sql-prettify:
     title: SQL 美化和格式化
     description: 在线格式化和美化您的 SQL 查询（它支持各种 SQL 方言）。
+    dialect: 方言
+    keyword_case: 关键字大小写
+    uppercase: 大写
+    lowercase: 小写
+    preserve: 保持原样
+    indent_style: 缩进样式
+    standard: 标准
+    tabular_left: 左侧表格式
+    tabular_right: 右侧表格式
+    input_label: 您的SQL查询
+    input_placeholder: 在此输入您的SQL查询...
+    output_label: 格式化后的查询
 
   benchmark-builder:
     title: 基准生成器
@@ -153,11 +173,15 @@ tools:
 
   random-port-generator:
     title: 随机端口生成
-    description: 生成“已知”端口范围（0-1023）之外的随机端口号。
+    description: 生成"已知"端口范围（0-1023）之外的随机端口号。
 
   yaml-prettify:
     title: YAML美化和格式化
     description: 将YAML字符串修饰为友好的可读格式。
+    
+  yaml-viewer:
+    title: YAML查看器
+    description: 查看、格式化和美化YAML字符串，使其更易于阅读和理解。
 
   eta-calculator:
     title: ETA 计算器
@@ -212,7 +236,7 @@ tools:
 
   numeronym-generator:
     title: 数字名称生成器
-    description: 数字名是一个用数字构成缩写的词。例如，“i18n”是“国际化”的名词，其中18表示单词中第一个i和最后一个n之间的字母数。
+    description: 数字名是一个用数字构成缩写的词。例如，"i18n"是"国际化"的名词，其中18表示单词中第一个i和最后一个n之间的字母数。
 
   case-converter:
     title: 大小写转换
@@ -220,7 +244,7 @@ tools:
 
   html-entities:
     title: 转义html实体
-    description: 转义或unescape html实体（将<、>、&、“和\'替换为其html版本）
+    description: 转义或unescape html实体（将<、>、&、"和\'替换为其html版本）
 
   json-prettify:
     title: JSON美化和格式化
@@ -257,6 +281,28 @@ tools:
   xml-formatter:
     title: XML 格式化
     description: 将XML字符串修饰为友好的可读格式。
+    collapse_content: 折叠内容
+    indent_size: 缩进大小
+    input_label: 您的XML
+    input_placeholder: 在此粘贴您的XML...
+    output_label: 格式化后的XML
+    validation_error: 提供的XML格式无效。
+
+  xml-to-json:
+    title: XML 到 JSON
+    description: 将 XML 转换为 JSON 格式。
+    input_label: 您的XML内容
+    input_placeholder: 在此粘贴您的XML内容...
+    output_label: 转换后的JSON
+    validation_error: 提供的XML格式无效。
+
+  json-to-xml:
+    title: JSON 到 XML
+    description: 将 JSON 转换为 XML 格式。
+    input_label: 您的JSON内容
+    input_placeholder: 在此粘贴您的JSON内容...
+    output_label: 转换后的XML
+    validation_error: 提供的JSON格式无效。
 
   temperature-converter:
     title: 温度转换器
@@ -285,6 +331,13 @@ tools:
   json-diff:
     title: JSON 差异比较
     description: 比较两个JSON对象并获得它们之间的差异。
+    first_json: 您的第一个JSON
+    first_json_placeholder: 在此粘贴您的第一个JSON...
+    compare_json: 您要比较的JSON
+    compare_json_placeholder: 在此粘贴您要比较的JSON...
+    only_show_differences: 仅显示差异
+    same_json: 提供的JSON内容相同
+    invalid_json: JSON格式无效
   jwt-parser:
     title: JWT令牌解析器
     description: 解析和解码JSON Web Token（JWT）并显示其内容。
@@ -328,6 +381,10 @@ tools:
   json-minify:
     title: JSON 压缩
     description: 通过删除不必要的空白来缩小和压缩JSON。
+    input_label: 您的原始JSON
+    input_placeholder: 在此粘贴您的原始JSON...
+    output_label: 压缩后的JSON
+    validation_error: 提供的JSON格式无效。
 
   ulid-generator:
     title: ULID 生成器
@@ -376,6 +433,8 @@ tools:
   text-diff:
     title: 文本比较
     description: 比较两个文本并查看它们之间的差异。
+    original_text: 原始文本
+    modified_text: 修改后的文本
 
   otp-generator:
     title: OTP代码生成器
@@ -383,7 +442,7 @@ tools:
 
   url-encoder:
     title: 编码/解码url格式的字符串
-    description: 编码为url编码格式（也称为“百分比编码”）或从中解码。
+    description: 编码为url编码格式（也称为"百分比编码"）或从中解码。
 
   text-to-binary:
     title: 文本到 ASCII 二进制
